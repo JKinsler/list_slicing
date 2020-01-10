@@ -107,8 +107,7 @@ def custom_insert(input_list, index, value):
         True
 
     """
-
-    pass
+    input_list[index:index] = [value]
 
 
 def custom_remove(input_list, value):
@@ -126,8 +125,12 @@ def custom_remove(input_list, value):
         True
 
     """
-
-    pass
+    index = 0
+    for item in input_list:
+        if item == value:
+            del input_list[index]
+            break
+        index = index + 1
 
 
 def custom_pop(input_list):
